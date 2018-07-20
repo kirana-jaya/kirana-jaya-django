@@ -19,3 +19,10 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+# Use include() to add paths from the mainsite application 
+from django.conf.urls import include
+from django.urls import path
+
+urlpatterns += [
+    path('/', include('mainsite.urls')),
+]
