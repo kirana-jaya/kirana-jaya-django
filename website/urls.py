@@ -19,10 +19,17 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
 # Use include() to add paths from the mainsite application 
 from django.conf.urls import include
 from django.urls import path
 
 urlpatterns += [
     path('mainsite/', include('mainsite.urls')),
+]
+
+#Add URL maps to redirect the base URL to our application
+from django.views.generic import RedirectView
+urlpatterns += [
+    path('', RedirectView.as_view(url='/mainsite/')),
 ]
