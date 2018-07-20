@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
 				'ENGINE': 'django.db.backends.postgresql',
+				'TIME_ZONE': 'Asia/Chongqing',
         'NAME': 'kiranajayadatabase',
         'USER': 'psql',
         'PASSWORD': '',
