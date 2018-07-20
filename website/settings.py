@@ -78,7 +78,6 @@ DATABASES = {
     'default': {
 				'ENGINE': 'django.db.backends.postgresql',
 				'TIME_ZONE': 'Asia/Chongqing',
-				'CHARSET': 'UTF8',
         'NAME': 'kiranajayadatabase',
         'USER': 'psql',
         'PASSWORD': '',
